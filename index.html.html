@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Edge — Words That Connect. Content That Resonates.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Serif), Cairo (Arabic), Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A2947',
+                            light: '#133a61',
+                            dark: '#061a2e'
+                        },
+                        cream: {
+                            DEFAULT: '#F3E4C9',
+                            light: '#FAF4E8',
+                            dark: '#E7D2AC'
+                        },
+                        sage: {
+                            DEFAULT: '#D3D4C0',
+                            light: '#E5E6D8',
+                            dark: '#B8B9A3'
+                        },
+                        terracotta: {
+                            DEFAULT: '#8B5E3C',
+                            hover: '#734c2f',
+                            light: '#A06D48'
+                        },
+                        whatsapp: '#25D366',
+                        whatsappHover: '#1EBE57',
+                        canvas: '#FAF7F2'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        arabic: ['"Cairo"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #0A2947;
+            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+        }
+        .serif-heading {
+            font-family: 'Playfair Display', 'Cairo', serif;
+        }
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D3D4C0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8B5E3C;
+        }
+        /* Floating pulse animation */
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-btn {
+            animation: subtle-pulse 3.5s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cream selection:text-navy text-navy/90">
+
+    <!-- SINGLE FLOATING WHATSAPP CTA BUTTON (ONLY GREEN ACCENT ON THE PAGE) -->
+    <a href="https://wa.me/970566247577" target="_blank" rel="noopener noreferrer" aria-label="Contact Wise Edge on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-whatsapp hover:bg-whatsappHover text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 pulse-btn group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-sm font-semibold pl-0 group-hover:pl-2">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-canvas/90 backdrop-blur-md border-b border-sage/40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo SVG Recreation based on user upload -->
+                <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="h-12 w-auto bg-cream px-3 py-1.5 rounded-lg border border-sage/50 flex items-center justify-center shadow-sm group-hover:border-terracotta/40 transition-all">
+                        <svg class="h-9 w-auto" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Globe Grid -->
+                            <circle cx="130" cy="120" r="45" stroke="#000" stroke-width="8" fill="none"/>
+                            <ellipse cx="130" cy="120" rx="20" ry="45" stroke="#000" stroke-width="6" fill="none"/>
+                            <line x1="85" y1="120" x2="175" y2="120" stroke="#000" stroke-width="6"/>
+                            <line x1="93" y1="95" x2="167" y2="95" stroke="#000" stroke-width="5"/>
+                            <line x1="93" y1="145" x2="167" y2="145" stroke="#000" stroke-width="5"/>
+                            
+                            <!-- Circular Arrow Surrounding Globe -->
+                            <path d="M 185 100 A 65 65 0 1 1 185 145" stroke="#000" stroke-width="8" stroke-linecap="round" fill="none"/>
+                            <polygon points="175,82 195,100 168,108" fill="#000"/>
+                            
+                            <!-- Airplane Icon at Top Right -->
+                            <g transform="translate(180, 52) rotate(25) scale(0.9)">
+                                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="#000"/>
+                            </g>
+                            
+                            <!-- Wise Edge Text -->
+                            <text x="130" y="215" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-style="italic" font-size="28" fill="#000">Wise Edge</text>
+                            
+                            <!-- international services Subtext -->
+                            <text x="130" y="242" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12" letter-spacing="3" fill="#000">INTERNATIONAL SERVICES</text>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-navy/80">
+                    <a href="#home" class="hover:text-terracotta transition-colors">Home</a>
+                    <a href="#services" class="hover:text-terracotta transition-colors">Services</a>
+                    <a href="#why-us" class="hover:text-terracotta transition-colors">Why Wise Edge</a>
+                    <a href="#process" class="hover:text-terracotta transition-colors">Process</a>
+                    <a href="#contact" class="hover:text-terracotta transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button onclick="openModal()" class="inline-flex items-center justify-center px-6 py-2.5 rounded-md text-sm font-semibold text-cream bg-terracotta hover:bg-terracotta-hover transition-all shadow-sm">
+                        Request a Quote
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="p-2 rounded-md text-navy hover:bg-cream/50 transition-colors">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-sage/40 bg-canvas/95 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-navy hover:bg-cream/50">Home</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-navy hover:bg-cream/50">Services</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-navy hover:bg-cream/50">Why Wise Edge</a>
+            <a href="#process" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-navy hover:bg-cream/50">Process</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-navy hover:bg-cream/50">Contact</a>
+            
+            <div class="pt-2">
+                <button onclick="toggleMobileMenu(); openModal();" class="w-full text-center px-5 py-3 rounded-md text-sm font-semibold text-cream bg-terracotta hover:bg-terracotta-hover transition-colors shadow-sm">
+                    Request a Quote
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- HERO SECTION -->
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-sage/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream text-terracotta border border-terracotta/20 text-xs font-semibold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+                            Wise Edge — Language & International Services
+                        </div>
+
+                        <h1 class="serif-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.15] tracking-tight">
+                            Words That Connect.<br class="hidden sm:inline" />
+                            <span class="text-terracotta italic font-normal">Content That Resonates.</span>
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-navy/80 max-w-2xl font-normal leading-relaxed">
+                            Professional translation, content writing, video subtitling, and proofreading services that preserve meaning, respect cultural context, and help your message reach the right audience.
+                        </p>
+
+                        <!-- HERO CTA BUTTONS -->
+                        <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                            <a href="#services" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md text-base font-semibold text-navy bg-cream border border-sage/60 hover:bg-cream-dark transition-all shadow-sm">
+                                Explore Our Services
+                            </a>
+
+                            <button onclick="openModal()" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md text-base font-semibold text-cream bg-terracotta hover:bg-terracotta-hover transition-all shadow-md">
+                                Request a Quote
+                                <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Highlights Badge Row -->
+                        <div class="pt-8 border-t border-sage/40 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-semibold text-navy/70">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-terracotta"></i>
+                                <span>Arabic & English Mastery</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-terracotta"></i>
+                                <span>Cultural Nuance</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-terracotta"></i>
+                                <span>Precision Editorial</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-terracotta"></i>
+                                <span>Dedicated Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Editorial Showcase Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -top-4 -bottom-4 -left-4 -right-4 bg-cream/60 rounded-2xl transform -rotate-1 border border-sage/50"></div>
+                            
+                            <div class="relative bg-white p-8 rounded-xl shadow-xl border border-sage/40 space-y-6">
+                                <div class="flex items-center justify-between border-b border-sage/30 pb-4">
+                                    <span class="text-xs font-semibold tracking-widest uppercase text-terracotta">Wise Edge Language Craft</span>
+                                    <span class="text-xs px-2.5 py-1 rounded bg-sage/30 text-navy/70 font-mono">EN ↔ AR</span>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <div class="p-4 rounded-lg bg-canvas border border-sage/30">
+                                        <div class="text-xs text-navy/50 uppercase tracking-wider mb-1 font-semibold">Source (English)</div>
+                                        <p class="serif-heading text-base sm:text-lg font-semibold text-navy">"Empowering brands with articulate and culturally resonant messaging."</p>
+                                    </div>
+
+                                    <div class="flex justify-center my-1 text-terracotta">
+                                        <i class="fa-solid fa-arrow-down-long text-lg"></i>
+                                    </div>
+
+                                    <div class="p-4 rounded-lg bg-navy text-cream shadow-sm">
+                                        <div class="text-xs text-cream/60 uppercase tracking-wider mb-1 font-semibold">Target (Arabic / العربية)</div>
+                                        <p class="font-arabic text-base sm:text-lg font-semibold text-cream text-right" dir="rtl">
+                                            "تمكين العلامات التجارية بلمسة لغوية واثقة ورسائل تلامس ثقافة الجمهور."
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2 text-center border-t border-sage/20">
+                                    <span class="text-xs text-navy/60 font-semibold">
+                                        Global Reach & International Excellence
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITION SECTION -->
+        <section class="py-16 md:py-24 bg-cream/30 border-b border-sage/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Built on Trust</span>
+                    <h2 class="serif-heading text-3xl sm:text-4xl font-bold text-navy mt-2">Core Value Proposition</h2>
+                    <p class="text-navy/70 mt-3 text-base sm:text-lg">Combining linguistic mastery with deep context sensitivity to ensure your ideas resonate across borders.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Pillar 1 -->
+                    <div class="bg-white p-8 rounded-xl border border-sage/40 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center text-terracotta text-xl mb-6">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="serif-heading text-xl font-bold text-navy mb-3">Linguistic Accuracy</h3>
+                        <p class="text-sm text-navy/70 leading-relaxed">
+                            Meticulous adherence to grammar, terminology, and syntax in both English and Arabic.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-white p-8 rounded-xl border border-sage/40 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center text-terracotta text-xl mb-6">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="serif-heading text-xl font-bold text-navy mb-3">Cultural Awareness</h3>
+                        <p class="text-sm text-navy/70 leading-relaxed">
+                            Deep awareness of cultural nuances and idioms ensuring natural, respectful tone across diverse audiences.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-white p-8 rounded-xl border border-sage/40 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center text-terracotta text-xl mb-6">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="serif-heading text-xl font-bold text-navy mb-3">Audience-Focused</h3>
+                        <p class="text-sm text-navy/70 leading-relaxed">
+                            Custom content strategies crafted for your specific business goals, digital platforms, and customer personas.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="bg-white p-8 rounded-xl border border-sage/40 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-lg bg-cream flex items-center justify-center text-terracotta text-xl mb-6">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="serif-heading text-xl font-bold text-navy mb-3">Attention to Detail</h3>
+                        <p class="text-sm text-navy/70 leading-relaxed">
+                            Rigorous multi-stage proofreading guaranteeing seamless formatting, clarity, and flawless execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-20 md:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-sage/40">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Specialized Offerings</span>
+                        <h2 class="serif-heading text-3xl sm:text-5xl font-bold text-navy mt-2">Wise Edge Services</h2>
+                    </div>
+                    <p class="text-navy/70 max-w-md mt-4 md:mt-0 text-sm sm:text-base">
+                        Dedicated language solutions tailored for businesses, content creators, e-commerce platforms, and organizations.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-2xl border border-sage/50 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
+                        <div class="p-8 sm:p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy text-cream flex items-center justify-center text-2xl group-hover:bg-terracotta transition-colors">
+                                    <i class="fa-solid fa-language"></i>
+                                </div>
+                                <span class="text-xs font-mono px-3 py-1 bg-cream rounded-full text-navy/80 font-medium">Bilingual Translation</span>
+                            </div>
+
+                            <h3 class="serif-heading text-2xl font-bold text-navy mb-3">Arabic-English Translation</h3>
+                            <p class="text-navy/70 text-sm leading-relaxed mb-6">
+                                Accurate translation for business documents, websites, marketing collateral, and official communication. We bridge Arabic and English while maintaining tone, context, and intent.
+                            </p>
+
+                            <ul class="space-y-2.5 text-xs font-medium text-navy/80 border-t border-sage/30 pt-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Legal, Corporate & Business Documents</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Website & E-commerce Localization</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Marketing & Branding Materials</li>
+                            </ul>
+                        </div>
+
+                        <div class="px-8 pb-8 pt-2 bg-gradient-to-t from-canvas/50 to-transparent">
+                            <button onclick="openModal('Arabic-English Translation')" class="w-full py-3 px-4 rounded-md bg-terracotta hover:bg-terracotta-hover text-cream font-semibold text-sm transition-all text-center shadow-sm">
+                                Request Quote
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-2xl border border-sage/50 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
+                        <div class="p-8 sm:p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy text-cream flex items-center justify-center text-2xl group-hover:bg-terracotta transition-colors">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </div>
+                                <span class="text-xs font-mono px-3 py-1 bg-cream rounded-full text-navy/80 font-medium">Copywriting & Articles</span>
+                            </div>
+
+                            <h3 class="serif-heading text-2xl font-bold text-navy mb-3">Content Writing</h3>
+                            <p class="text-navy/70 text-sm leading-relaxed mb-6">
+                                Captivating, SEO-conscious content crafted to communicate your authority and engage readers. From blog articles to landing page copy, Wise Edge translates complex ideas into persuasive copy.
+                            </p>
+
+                            <ul class="space-y-2.5 text-xs font-medium text-navy/80 border-t border-sage/30 pt-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Website Copy & Landing Pages</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Blog Posts & Thought Leadership</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Product Descriptions & E-commerce</li>
+                            </ul>
+                        </div>
+
+                        <div class="px-8 pb-8 pt-2 bg-gradient-to-t from-canvas/50 to-transparent">
+                            <button onclick="openModal('Content Writing')" class="w-full py-3 px-4 rounded-md bg-terracotta hover:bg-terracotta-hover text-cream font-semibold text-sm transition-all text-center shadow-sm">
+                                Request Quote
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-2xl border border-sage/50 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
+                        <div class="p-8 sm:p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy text-cream flex items-center justify-center text-2xl group-hover:bg-terracotta transition-colors">
+                                    <i class="fa-solid fa-closed-captioning"></i>
+                                </div>
+                                <span class="text-xs font-mono px-3 py-1 bg-cream rounded-full text-navy/80 font-medium">Media Localization</span>
+                            </div>
+
+                            <h3 class="serif-heading text-2xl font-bold text-navy mb-3">Video Translation & Subtitling</h3>
+                            <p class="text-navy/70 text-sm leading-relaxed mb-6">
+                                Timed, readable, and contextually precise subtitling and video translation. Perfect for YouTube, Reels, TikTok, corporate presentations, and educational courses.
+                            </p>
+
+                            <ul class="space-y-2.5 text-xs font-medium text-navy/80 border-t border-sage/30 pt-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Time-coded Subtitle Files (.SRT, .VTT)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Social Media Reel & Video Subtitles</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> On-screen Graphic Translation</li>
+                            </ul>
+                        </div>
+
+                        <div class="px-8 pb-8 pt-2 bg-gradient-to-t from-canvas/50 to-transparent">
+                            <button onclick="openModal('Video Translation & Subtitling')" class="w-full py-3 px-4 rounded-md bg-terracotta hover:bg-terracotta-hover text-cream font-semibold text-sm transition-all text-center shadow-sm">
+                                Request Quote
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-2xl border border-sage/50 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
+                        <div class="p-8 sm:p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-xl bg-navy text-cream flex items-center justify-center text-2xl group-hover:bg-terracotta transition-colors">
+                                    <i class="fa-solid fa-spell-check"></i>
+                                </div>
+                                <span class="text-xs font-mono px-3 py-1 bg-cream rounded-full text-navy/80 font-medium">Editorial Polish</span>
+                            </div>
+
+                            <h3 class="serif-heading text-2xl font-bold text-navy mb-3">Proofreading & Language Editing</h3>
+                            <p class="text-navy/70 text-sm leading-relaxed mb-6">
+                                Detailed editing to correct syntax, polish sentence structure, enhance vocabulary, and refine overall flow for a professional, publish-ready result.
+                            </p>
+
+                            <ul class="space-y-2.5 text-xs font-medium text-navy/80 border-t border-sage/30 pt-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Grammar, Punctuation & Style Correction</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Readability & Consistency Enhancement</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta"></i> Comprehensive Academic & Business Editing</li>
+                            </ul>
+                        </div>
+
+                        <div class="px-8 pb-8 pt-2 bg-gradient-to-t from-canvas/50 to-transparent">
+                            <button onclick="openModal('Proofreading & Language Editing')" class="w-full py-3 px-4 rounded-md bg-terracotta hover:bg-terracotta-hover text-cream font-semibold text-sm transition-all text-center shadow-sm">
+                                Request Quote
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE WISE EDGE SECTION -->
+        <section id="why-us" class="py-20 md:py-28 bg-navy text-cream relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#F3E4C9 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-terracotta-light">The Wise Edge Advantage</span>
+                        <h2 class="serif-heading text-3xl sm:text-5xl font-bold text-cream leading-tight">Why Choose Wise Edge?</h2>
+                        <p class="text-cream/80 text-base leading-relaxed">
+                            Language services demand more than literal translation. Wise Edge combines cultural sensitivity, linguistic accuracy, and clear communication to give your brand a decisive edge.
+                        </p>
+                        <div class="pt-4">
+                            <button onclick="openModal()" class="px-8 py-3.5 rounded-md bg-terracotta hover:bg-terracotta-hover text-cream font-semibold text-sm transition-colors shadow">
+                                Start Your Project
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        
+                        <div class="bg-navy-light/60 p-6 rounded-xl border border-cream/10 space-y-3">
+                            <div class="text-terracotta-light text-2xl">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="serif-heading text-xl font-bold text-cream">Meaning-First Communication</h3>
+                            <p class="text-xs text-cream/70 leading-relaxed">
+                                We convey core ideas, emotional intent, and context rather than mechanical word-for-word substitution.
+                            </p>
+                        </div>
+
+                        <div class="bg-navy-light/60 p-6 rounded-xl border border-cream/10 space-y-3">
+                            <div class="text-terracotta-light text-2xl">
+                                <i class="fa-solid fa-heart-circle-check"></i>
+                            </div>
+                            <h3 class="serif-heading text-xl font-bold text-cream">Cultural Sensitivity</h3>
+                            <p class="text-xs text-cream/70 leading-relaxed">
+                                Deep understanding of regional idioms ensures your message lands authentically in both Arabic and Western contexts.
+                            </p>
+                        </div>
+
+                        <div class="bg-navy-light/60 p-6 rounded-xl border border-cream/10 space-y-3">
+                            <div class="text-terracotta-light text-2xl">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3 class="serif-heading text-xl font-bold text-cream">Natural Language Flow</h3>
+                            <p class="text-xs text-cream/70 leading-relaxed">
+                                Output that reads naturally as if written natively, eliminating awkward phrasing or robotic translations.
+                            </p>
+                        </div>
+
+                        <div class="bg-navy-light/60 p-6 rounded-xl border border-cream/10 space-y-3">
+                            <div class="text-terracotta-light text-2xl">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="serif-heading text-xl font-bold text-cream">Careful Review</h3>
+                            <p class="text-xs text-cream/70 leading-relaxed">
+                                Multi-layered review process verifying style, tone, accuracy, and formatting before final delivery.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUR-STEP PROCESS SECTION -->
+        <section id="process" class="py-20 md:py-28 border-b border-sage/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Simple Workflow</span>
+                    <h2 class="serif-heading text-3xl sm:text-4xl font-bold text-navy mt-2">How We Work Together</h2>
+                    <p class="text-navy/70 mt-3 text-base">A seamless four-step process designed for quick turnaround and precision.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-start relative p-6 rounded-xl bg-white border border-sage/40 shadow-sm">
+                        <span class="serif-heading text-4xl font-bold text-terracotta/40 mb-4">01</span>
+                        <h3 class="serif-heading text-lg font-bold text-navy mb-2">Share Your Project</h3>
+                        <p class="text-xs text-navy/70 leading-relaxed">
+                            Send us your text, video, or details via email, direct request form, or contact channels.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-start relative p-6 rounded-xl bg-white border border-sage/40 shadow-sm">
+                        <span class="serif-heading text-4xl font-bold text-terracotta/40 mb-4">02</span>
+                        <h3 class="serif-heading text-lg font-bold text-navy mb-2">Discuss Your Needs</h3>
+                        <p class="text-xs text-navy/70 leading-relaxed">
+                            We align on scope, target audience tone, deadlines, and provide a clear transparent quote.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-start relative p-6 rounded-xl bg-white border border-sage/40 shadow-sm">
+                        <span class="serif-heading text-4xl font-bold text-terracotta/40 mb-4">03</span>
+                        <h3 class="serif-heading text-lg font-bold text-navy mb-2">Language Work & Review</h3>
+                        <p class="text-xs text-navy/70 leading-relaxed">
+                            Our team executes translation or content creation followed by meticulous quality review.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-start relative p-6 rounded-xl bg-white border border-sage/40 shadow-sm">
+                        <span class="serif-heading text-4xl font-bold text-terracotta/40 mb-4">04</span>
+                        <h3 class="serif-heading text-lg font-bold text-navy mb-2">Receive Final Content</h3>
+                        <p class="text-xs text-navy/70 leading-relaxed">
+                            Get publication-ready content on schedule, backed by responsive post-delivery support.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA BANNER -->
+        <section class="py-20 bg-cream/40 border-b border-sage/30">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="bg-white p-10 sm:p-16 rounded-3xl border border-sage/50 shadow-md space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Ready To Elevate Your Content?</span>
+                    <h2 class="serif-heading text-3xl sm:text-5xl font-bold text-navy">
+                        Let’s Make Every Word Count.
+                    </h2>
+                    <p class="text-navy/70 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                        Reach out to Wise Edge today to discuss your language requirements or request a quick estimate.
+                    </p>
+                    <div class="pt-4 flex justify-center">
+                        <button onclick="openModal()" class="px-9 py-4 rounded-md text-base font-semibold text-cream bg-terracotta hover:bg-terracotta-hover transition-all shadow-md">
+                            Get in Touch & Request Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 md:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Direct Contact Channels -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Direct Contact</span>
+                            <h2 class="serif-heading text-3xl sm:text-4xl font-bold text-navy mt-2">Get in Touch with Wise Edge</h2>
+                            <p class="text-navy/70 mt-3 text-sm leading-relaxed">
+                                Need a quote or have questions about an upcoming project? Reach out directly via phone, email, or our inquiry form.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Direct Phone / Phone Details -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-cream flex items-center justify-center text-terracotta shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase text-navy/50 tracking-wider">Direct Phone</h4>
+                                    <p class="text-sm font-semibold text-navy mt-0.5" dir="ltr">+970 566 247 577</p>
+                                    <p class="text-xs text-navy/50">Available for calls & direct messages</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-cream flex items-center justify-center text-terracotta shrink-0">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase text-navy/50 tracking-wider">Email Support</h4>
+                                    <a href="mailto:contact@wiseedge.com" class="text-sm font-semibold text-navy hover:text-terracotta transition-colors">contact@wiseedge.com</a>
+                                    <p class="text-xs text-navy/50">For document submissions & formal inquiries</p>
+                                </div>
+                            </div>
+
+                            <!-- Social Links Placeholder -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-cream flex items-center justify-center text-terracotta shrink-0">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase text-navy/50 tracking-wider">Follow Wise Edge</h4>
+                                    <div class="flex items-center gap-3 mt-1.5">
+                                        <a href="#" class="w-8 h-8 rounded bg-navy text-cream flex items-center justify-center hover:bg-terracotta transition-colors text-xs" aria-label="LinkedIn">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#" class="w-8 h-8 rounded bg-navy text-cream flex items-center justify-center hover:bg-terracotta transition-colors text-xs" aria-label="X (Twitter)">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        <a href="#" class="w-8 h-8 rounded bg-navy text-cream flex items-center justify-center hover:bg-terracotta transition-colors text-xs" aria-label="Instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-xl bg-cream/40 border border-sage/40 text-xs text-navy/70 leading-relaxed">
+                            <i class="fa-solid fa-shield-halved text-terracotta mr-1.5"></i>
+                            <strong>Confidentiality Guaranteed:</strong> All submitted documents and details are handled with complete confidentiality.
+                        </div>
+                    </div>
+
+                    <!-- Message Form -->
+                    <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-sage/50 shadow-sm">
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <h3 class="serif-heading text-xl font-bold text-navy mb-4">Send Wise Edge a Message</h3>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-2">Your Name *</label>
+                                    <input type="text" required placeholder="Name / الاسم" class="w-full px-4 py-3 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-2">Email Address *</label>
+                                    <input type="email" required placeholder="email@domain.com" class="w-full px-4 py-3 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-2">Service Needed</label>
+                                    <select class="w-full px-4 py-3 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                                        <option>Arabic-English Translation</option>
+                                        <option>Content Writing</option>
+                                        <option>Video Translation & Subtitling</option>
+                                        <option>Proofreading & Editing</option>
+                                        <option>General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-2">Estimated Volume / Duration</label>
+                                    <input type="text" placeholder="e.g. 2,000 words or 10-min video" class="w-full px-4 py-3 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-2">Project Details *</label>
+                                <textarea rows="4" required placeholder="Describe your project, audience, and timeline..." class="w-full px-4 py-3 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-md text-sm font-semibold text-cream bg-terracotta hover:bg-terracotta-hover transition-colors shadow">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- Form Success Message -->
+                        <div id="form-success-msg" class="hidden p-6 rounded-lg bg-cream text-navy border border-terracotta/30 text-center space-y-2">
+                            <i class="fa-solid fa-circle-check text-terracotta text-3xl"></i>
+                            <h4 class="serif-heading font-bold text-lg">Thank You!</h4>
+                            <p class="text-xs text-navy/80">Your message has been received by Wise Edge. We will contact you shortly.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER WITH SVG LOGO -->
+    <footer class="bg-navy text-cream/80 border-t border-navy-light pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-cream/10">
+                
+                <!-- Brand Summary with Logo -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="h-12 w-auto bg-cream px-3 py-1.5 rounded-lg border border-sage/50 flex items-center justify-center">
+                            <svg class="h-9 w-auto" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="130" cy="120" r="45" stroke="#000" stroke-width="8" fill="none"/>
+                                <ellipse cx="130" cy="120" rx="20" ry="45" stroke="#000" stroke-width="6" fill="none"/>
+                                <line x1="85" y1="120" x2="175" y2="120" stroke="#000" stroke-width="6"/>
+                                <line x1="93" y1="95" x2="167" y2="95" stroke="#000" stroke-width="5"/>
+                                <line x1="93" y1="145" x2="167" y2="145" stroke="#000" stroke-width="5"/>
+                                <path d="M 185 100 A 65 65 0 1 1 185 145" stroke="#000" stroke-width="8" stroke-linecap="round" fill="none"/>
+                                <polygon points="175,82 195,100 168,108" fill="#000"/>
+                                <g transform="translate(180, 52) rotate(25) scale(0.9)">
+                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="#000"/>
+                                </g>
+                                <text x="130" y="215" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-style="italic" font-size="28" fill="#000">Wise Edge</text>
+                                <text x="130" y="242" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12" letter-spacing="3" fill="#000">INTERNATIONAL SERVICES</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-cream/70 max-w-sm leading-relaxed">
+                        Wise Edge provides professional Arabic-English language services, precision content writing, subtitling, and editing to empower your brand message worldwide.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-cream transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-cream transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-cream transition-colors">Why Wise Edge</a></li>
+                        <li><a href="#process" class="hover:text-cream transition-colors">Our Process</a></li>
+                        <li><a href="#contact" class="hover:text-cream transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-cream">Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-cream/70">Arabic-English Translation</span></li>
+                        <li><span class="text-cream/70">Content Writing & Copywriting</span></li>
+                        <li><span class="text-cream/70">Video Subtitling & Translation</span></li>
+                        <li><span class="text-cream/70">Proofreading & Language Editing</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-cream/50 gap-4">
+                <p>&copy; 2026 Wise Edge International Services. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-cream transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-cream transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- REQUEST A QUOTE MODAL -->
+    <div id="quote-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy/80 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative border border-sage/50 shadow-2xl overflow-y-auto max-h-[90vh]">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-navy/50 hover:text-navy p-2 rounded-full focus:outline-none">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Wise Edge Quote Request</span>
+                <h3 class="serif-heading text-2xl font-bold text-navy mt-1">Tell Us About Your Project</h3>
+                <p class="text-xs text-navy/60 mt-1">Submit your project details for a prompt estimate.</p>
+            </div>
+
+            <form id="modal-quote-form" onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-1">Full Name *</label>
+                    <input type="text" required placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-1">Email Address *</label>
+                    <input type="email" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-1">Service Required *</label>
+                    <select id="modal-service-select" class="w-full px-3.5 py-2.5 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                        <option value="Arabic-English Translation">Arabic-English Translation</option>
+                        <option value="Content Writing">Content Writing</option>
+                        <option value="Video Translation & Subtitling">Video Translation & Subtitling</option>
+                        <option value="Proofreading & Language Editing">Proofreading & Language Editing</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-1">Word Count / Length</label>
+                        <input type="text" placeholder="e.g. 1,500 words" class="w-full px-3.5 py-2.5 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-1">Target Deadline</label>
+                        <input type="date" class="w-full px-3.5 py-2.5 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-navy/80 uppercase tracking-wider mb-1">Project Summary / Link</label>
+                    <textarea rows="3" placeholder="Brief description of requirements or website URL..." class="w-full px-3.5 py-2.5 rounded-md bg-canvas border border-sage/60 focus:outline-none focus:border-terracotta text-sm text-navy"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3 rounded-md text-sm font-semibold text-cream bg-terracotta hover:bg-terracotta-hover transition-colors shadow">
+                        Submit Quote Request
+                    </button>
+                </div>
+            </form>
+
+            <div id="modal-success-msg" class="hidden py-8 text-center space-y-3">
+                <i class="fa-solid fa-circle-check text-terracotta text-4xl"></i>
+                <h4 class="serif-heading text-xl font-bold text-navy">Request Received!</h4>
+                <p class="text-xs text-navy/70">Wise Edge will review your project details and contact you promptly.</p>
+                <button onclick="closeModal()" class="px-6 py-2.5 rounded bg-navy text-cream text-xs font-semibold">Close</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        }
+
+        function openModal(serviceName = null) {
+            const modal = document.getElementById('quote-modal');
+            const select = document.getElementById('modal-service-select');
+            const form = document.getElementById('modal-quote-form');
+            const successMsg = document.getElementById('modal-success-msg');
+
+            form.classList.remove('hidden');
+            successMsg.classList.add('hidden');
+
+            if (serviceName && select) {
+                select.value = serviceName;
+            }
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('quote-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('quote-modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('form-success-msg').classList.remove('hidden');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            document.getElementById('modal-quote-form').classList.add('hidden');
+            document.getElementById('modal-success-msg').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
